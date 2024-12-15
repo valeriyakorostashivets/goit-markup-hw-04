@@ -160,6 +160,7 @@ button {
     url("../images/people-office.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
@@ -317,6 +318,7 @@ button {
 
 .portfolio-list-item {
   width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .border {
@@ -331,7 +333,7 @@ button {
   overflow: hidden;
 }
 
-.overlay-box {
+.overlay {
   background-color: #4d5ae5;
   padding: 40px 32px;
   position: absolute;
@@ -344,8 +346,8 @@ button {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-list-item:hover .overlay-box,
-.portfolio-list-item:focus .overlay-box {
+.portfolio-list-item:hover .overlay,
+.portfolio-list-item:focus .overlay {
   transform: translateY(0);
 }
 
@@ -353,7 +355,6 @@ button {
 .portfolio-list-item:focus {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer {
@@ -364,7 +365,11 @@ button {
 
 .foot-cont {
   display: flex;
-  gap: 120px;
+  align-items: baseline;
+}
+
+.margin-right {
+  margin-right: 120px;
 }
 
 .footer-logo {
